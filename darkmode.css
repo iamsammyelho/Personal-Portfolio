@@ -1,0 +1,506 @@
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #131313ee;
+    color: #fff;
+}
+#header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/bgtwo.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.container {
+    padding: 10px;
+}
+nav {
+    width: 100%;
+    padding: 10px 5%;
+    height: 10vh;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1000;
+    align-items: center;
+    background-image: linear-gradient(#515050 10%, #171717 100%);
+}
+.logo {
+    width: 3rem;
+    height: 3.5rem;
+    border-radius: 60%;
+}
+nav ul li {
+    display: inline-block;
+    margin: 10px 20px;
+    list-style: none;
+
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* adding underline hover to wbepage navigations only */
+nav ul li a[href^="#"]::after {
+    content: ' ';
+    width: 0%;
+    background: rgba(255, 1, 1, 0.836);
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+}
+nav ul li a:hover::after {
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.header__text {
+    margin-top: 16%;
+    font-size: 30px;
+}
+.header__text h1 span {
+    color: rgba(255, 0, 0, 0.7);
+}
+.header__text h1 {
+    margin-top: 10px;
+}
+.header__text p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #ababab;
+}
+/* Removing the whatsapp and call icon from desktop display */
+nav ul .whatsapp , nav ul .phone{
+    display: none;
+}
+/* ----------------About Section------------ */
+#about {
+    padding: 20px 10px;
+    color: #ababab;
+    width: 100%;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+.about__col--1 {
+    flex-basis: 35%;
+}
+.about__col--1 img {
+    border-radius: 40%;
+    width: 100%;
+}
+.about__col--2 {
+    flex-basis: 60%;
+    margin-top: 0;
+    padding: 10px;
+    word-wrap: break-word;
+}
+.subtitle {
+    margin-top: 1rem ;
+    margin-bottom: 1.5rem;
+    font-size: 5rem;
+    font-weight: 500;
+    color: rgb(255, 255, 255) ;
+}
+.tab__titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab__links  {
+    margin-right: 50px;
+    font-weight: 450;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+}
+.tab__links::after {
+    content: ' ';
+    width: 0%;
+    background: rgba(255, 1, 1, 0.836);
+    height: 3px;
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+    transition: all 0.5s ease;
+}
+.tab__links.active__link::after {
+    width: 100%;
+}
+.tab__contents ul li {
+    list-style: none;
+    margin: 20px 0;
+}
+.tab__contents ul li span {
+    color: rgba(255, 0, 0, 0.681);
+    font-weight: 500;
+    font-size: 19px;
+}
+.tab__contents ul li a{
+    color: #ababab;
+}
+.tab__contents ul li a:hover {
+    color: #ababab90;
+}
+.tab__contents {
+    display: none;
+}
+.tab__contents.active__tab {
+    display: block;
+}
+/* -----------Services ---------------*/
+#services {
+    padding: 30px 0;
+    background-color: #131313;
+}
+.services__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.services__list div {
+    background-image: linear-gradient(#00000074 10%, #ababab51 100%);
+    padding: 40px;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 9px;
+    height: 17rem;
+    margin: 4rem 1rem 0;
+}
+.services__list div i {
+    font-size: 50px;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+.services__list div h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 3rem;
+}
+.services__list div p {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.services__list div a {
+    text-decoration: underline;
+    font-size: 10px;
+    display: inline-block;
+    color: #fff;
+    margin-top: 1rem;
+}
+.services__list div:hover {
+    background-color: rgba(255, 1, 1, 0.478);
+    transition: all 0.5s ease;
+    transform: translateY(-10px);
+}
+.services__list div a:hover {
+    color: #ffffffda;
+    font-size: 20px;
+    font-weight: 400;
+    transition: 0.5s;
+}
+/* ------Portfolio-------- */
+#portfolio {
+    padding: 50px 4px;
+}
+#portfolio {
+    padding: 30px 0;
+    background-color: #131313d2;
+}
+.worklist {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    margin: 1rem;
+    height: 500px;
+}
+.work img {
+    display: block;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    margin: 1rem;
+    filter: brightness(70%);
+}
+.btn {
+    text-decoration: none;
+    width: 6rem;
+    height: 2.5rem;
+    background-color: rgba(255, 0, 0, 0.535);
+    color: #fff;
+    border-radius: 5px;
+    padding: 4px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin: 50px auto;
+    align-items: center;
+    font-weight: 600;
+    border: none;
+}
+.btn:hover {
+    background-color: rgba(33, 31, 31, 0);
+    transition: all 0.5s;
+}
+/* ----------Contact section------------ */
+#contact {
+    padding: 50px 10px;
+    background-color: #131313;
+}
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+.contact__info{
+    background-color: #00000000;
+    width: 45rem;
+}
+.contact__info i.fa-solid {
+    color: red;
+    margin: 16px;
+}
+.contact__info p{
+    margin-left: 15px;
+    font-weight: 600;
+    color: #ababab;
+}
+.social__icons {
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 2rem;
+    width: 100%;
+    height: 2rem;
+}
+.social__icons i.fa-brands {
+    padding: 5px;
+    color: #ababab;
+}
+.social__icons i:hover {
+    color: rgba(255, 0, 0, 0.764);
+    transition: all 0.5s ease;
+    transform: scale(1.5);
+}
+.contact__info a.btn {
+    width: 10rem;
+}
+.message{
+    width: 44rem;
+    height: 27rem;
+    background-color: rgba(0, 0, 0, 0);
+}
+#sender {
+    width: 100%;
+    background-color: #2f2c2c50;
+    height: 3rem;
+    margin-top: 2rem;
+    border-style: none;
+    border-radius: 5px;
+    color: #bebebe;
+    outline: none;
+    font-size: 1rem;
+}
+#mail {
+    width: 100%;
+    background-color: #2f2c2c50;
+    height: 3rem;
+    margin-top: 15px;
+    border-style: none;
+    border-radius: 5px;
+    color: #bebebe;
+    outline: none;
+    font-size: 1rem;
+}
+.message textarea {
+    width: 100%;
+    background-color: #2f2c2c50;
+    height: 13rem;
+    margin-top: 15px;
+    border-style: none;
+    border-radius: 5px;
+    color: #bebebe;
+    outline: none;
+    font-size: 1rem;
+}
+.message form input.btn {
+    width: 8rem;
+    border-style: none;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.footer {
+    background-color: #00000000;
+    width: 100%;
+    height: 1.5rem;
+    align-items: center;
+    border-radius: 40%;
+    justify-content: center;
+    padding: 4px;
+}
+.footer__text {
+    font-weight: 600;
+    color: #ababab;
+    text-align: center;
+    font-size: 10px;
+}
+nav i.fa-power-off ,nav i.fa-bars {
+    display: none;
+}
+
+/* ---------dark mode toggle--------- */
+nav ul li i.fa-sun {
+    display: flex;
+    color: #fff;
+}
+nav ul li i {
+    font-size: 1.5rem;
+    margin-top: 13px;
+}
+nav i.fa-solid:hover {
+    color: #ababab;
+}
+/* Tablet and Mobile responsive */
+@media screen and (max-width: 900px) {
+    .header__text  {
+        margin-top: 30rem;
+        font-size: 12px;
+    }
+    .header__text h1 {
+        font-weight: 400;
+    }
+    #header {
+        background-image: url('images/bgtwo\ -\ Copy.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    nav i.fa-solid {
+        display: block;
+    }
+
+    
+    nav ul {
+        background-image: linear-gradient(#000000f1 20%, #4a2525 100%);
+        position: fixed;
+        justify-content: center;
+        top: 0;
+        right: -210px;
+        padding-top: 50px;
+        width: 200px;
+        height: 100vh;
+        z-index: 88;
+        transition: right 0.5s;
+        overflow: auto;
+    }
+    nav ul li {
+        display: block;
+        margin: 40px 30px 30px;
+    }
+    nav ul li:nth-child(1) {
+        display: block;
+        margin-top: 70px;
+    }
+    nav ul li:nth-child(8), nav ul li:nth-child(9) {
+        display: block;
+    }
+    nav ul .phone{
+        margin-top: 10rem;
+    }
+    nav ul .whatsapp , nav ul .phone{
+        justify-content: center;
+        cursor: pointer;
+        width: 100%;
+        margin-left: 0;
+        align-items: center;
+        text-align: center;
+        border: 1px solid #ababab;
+        border-left: none;
+    }
+    nav ul .whatsapp:hover , nav ul .phone:hover{
+        background-color: #573030e8;
+    }
+    nav ul i.fa-power-off{
+        position: absolute;
+        right: 8.2rem;
+        top: 50px;
+        font-size: 1.7rem;
+        cursor: pointer;
+        color: #ffffff;
+    }
+    nav i.fa-bars {
+        cursor: pointer;
+        font-size: 1.2rem;
+        color: #fff;
+        font-size: 25px;
+    }
+    .subtitle {
+        font-size: 50px;
+    }
+    .about__col--1, .about__col--2 {
+        flex-basis: 100%;
+    }
+    .about__col--1 {
+        margin-bottom: 20px;
+        width: 80%;
+    }
+    .about__col--2 {
+        flex-wrap: wrap;
+        word-wrap: break-word;
+        width: 80%;
+    }
+    .about__me {
+        text-align: left;
+        overflow-x: none;
+        overflow-y: none;
+        font-size: 13px;
+    }
+    .services__list {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .services__list div h1 {
+        font-size: 25px;
+    }
+    .services__list div p{
+        font-size: 10px;
+    }
+    .services__list div a {
+        font-size: 15px;
+        text-decoration: underline;
+    }
+    .services__list div i {
+        font-size: 35px;
+    }
+    .worklist {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .contact__info p, i{
+        font-size: 10px;
+        color: #ababab;
+    }
+    .btn {
+        font-size: 12px;
+    }
+    .message {
+        flex-basis: 100%;
+    }
+    
+
+}
