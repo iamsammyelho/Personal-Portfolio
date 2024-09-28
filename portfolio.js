@@ -60,6 +60,6 @@ function sendmail() {
     const message = document.getElementById('message').Value;
     const sender = document.getElementById('sender').Value;
     const mailtolink = 'mailto:iamsammyelho@gmail.com' + '?subject=Message from web from' + sender + '&body=' + encodeURIComponent(message);
-    window.location.href = mailtolink;
+    window.open(mailtolink);
 
 }
